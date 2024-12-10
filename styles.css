@@ -358,6 +358,7 @@ height: 100%;
     border: 2px solid var(--accent-color);
     color: var(--accent-color);
     border-radius: 5px;
+    resize: none;
 }
 
 .contact-form button {

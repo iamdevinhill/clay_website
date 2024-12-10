@@ -40,6 +40,18 @@ function onPlayerStateChange(event) {
     }
 }
 
+document.getElementById("email-button").addEventListener("click", function () {
+    const recipient = "claytonnileyoung@gmail.com"; // Replace with your email
+    const subject = encodeURIComponent("Inquiry from Your Website");
+    const body = encodeURIComponent("Hi,\n\nI would like to inquire about:\n\nBest regards,\n[Your Name]");
+    
+    // Construct the mailto link
+    const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}`;
+    
+    // Open the mailto link
+    window.location.href = mailtoLink;
+});
+
 // Hamburger menu functionality
 document.addEventListener('DOMContentLoaded', () => {
     const hamburgerMenu = document.querySelector('.hamburger-menu');

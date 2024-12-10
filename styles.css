@@ -54,6 +54,7 @@ header {
 .nav-links {
     display: flex;
     list-style: none;
+    transition: all 0.3s ease;
 }
 
 .nav-links li {
@@ -138,7 +139,7 @@ header {
     transform: scale(1.05);
 }
 
-.music-section, .merch-section, .contact-section {
+.music-section, .merch-section, .contact-section, .video-section, .tour-section {
     background-color: var(--secondary-color);
     padding: 2rem;
     margin: 2rem 0;
@@ -146,13 +147,20 @@ header {
     text-align: center;
 }
 
-.music-grid, .merch-grid {
+.music-grid, .merch-grid, .video-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
 }
 
-.album, .merch-item {
+.music-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.video-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.album, .merch-item, .tour-card, .contact-card {
     background-color: var(--primary-color);
     color: var(--accent-color);
     padding: 1rem;
@@ -168,71 +176,23 @@ header {
     margin-bottom: 1rem;
 }
 
-.video-section {
-padding: 2rem;
-background-color: var(--secondary-color);
-border-radius: 10px;
-margin: 2rem 0;
-}
-
-.video-container {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 1.5rem;
-}
-
-.merch-item {
-background-color: var(--primary-color);
-color: var(--accent-color);
-padding: 1rem;
-text-align: center;
-border-radius: 5px;
-border: 2px solid var(--accent-color);
-transition: transform 0.3s ease;
-}
-
-.video-section {
-padding: 2rem;
-background-color: var(--secondary-color);
-border-radius: 10px;
-margin: 2rem 0;
-}
-
-.video-container {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 1.5rem;
-}
-
-.merch-item {
-background-color: var(--primary-color);
-color: var(--accent-color);
-padding: 1rem;
-text-align: center;
-border-radius: 5px;
-border: 2px solid var(--accent-color);
-transition: transform 0.3s ease;
-}
-
 .video-embed {
-position: relative;
-padding-bottom: 56.25%; /* Aspect ratio 16:9 */
-height: 0;
-overflow: hidden;
-max-width: 100%;
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
 }
 
 .video-embed iframe {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-
-    /* New styles for mobile navigation */
-    .hamburger-menu {
+.hamburger-menu {
     display: none;
     flex-direction: column;
     cursor: pointer;
@@ -250,13 +210,13 @@ height: 100%;
     transition: 0.4s;
 }
 
-.nav-links {
-    transition: all 0.3s ease;
-}
-
 @media screen and (max-width: 768px) {
     .hamburger-menu {
         display: flex;
+    }
+
+    .logo {
+        font-size: 1.5rem;
     }
 
     .nav-links {
@@ -269,7 +229,6 @@ height: 100%;
         height: 100vh;
         justify-content: center;
         align-items: center;
-        transition: 0.3s;
         z-index: 150;
     }
 
@@ -289,12 +248,6 @@ height: 100%;
         transform: translateX(0);
     }
 
-    .nav-links.active li:nth-child(1) { transition-delay: 0.1s; }
-    .nav-links.active li:nth-child(2) { transition-delay: 0.2s; }
-    .nav-links.active li:nth-child(3) { transition-delay: 0.3s; }
-    .nav-links.active li:nth-child(4) { transition-delay: 0.4s; }
-    .nav-links.active li:nth-child(5) { transition-delay: 0.5s; }
-
     .hamburger-menu.active .bar:nth-child(1) {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
@@ -307,45 +260,36 @@ height: 100%;
         transform: rotate(45deg) translate(-5px, -6px);
     }
 
-    .logo {
-       font-size: 1.5rem; 
+    header {
+        flex-direction: column;
+    }
+
+    .tour-card {
+        flex-direction: column;
+        text-align: center;
     }
 }
 
-/* Responsive grid for larger screens */
 @media (min-width: 768px) {
-.video-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 videos per row */
-}
-}
-
-/* For small screens, make the video size more responsive */
-@media (max-width: 768px) {
-.merch-item iframe {
-    width: 100%;
-    height: auto;
-}
+    .video-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-/* For very small screens (mobile), adjust the layout further */
 @media (max-width: 480px) {
-.video-section {
-    padding: 1rem;
+    .video-section {
+        padding: 1rem;
+    }
+
+    .video-container {
+        grid-template-columns: 1fr;
+    }
+
+    .video-embed iframe {
+        height: 180px;
+    }
 }
 
-.video-container {
-    grid-template-columns: 1fr; /* Single column on mobile */
-}
-
-.merch-item {
-    padding: 0.5rem;
-}
-
-.video-embed iframe {
-    width: 100%;
-    height: 180px; /* Smaller video on mobile */
-}
-}
 .contact-form {
     display: grid;
     gap: 1rem;
@@ -401,14 +345,22 @@ footer {
     color: var(--primary-color);
 }
 
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
+.ticket-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid var(--accent-color);
+    white-space: nowrap;
+    margin-left: 1rem;
+}
 
-    .nav-links {
-        margin-top: 1rem;
-    }
-
-
+.ticket-button:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    transform: scale(1.05);
 }

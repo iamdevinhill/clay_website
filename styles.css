@@ -268,6 +268,10 @@ header {
         flex-direction: column;
         text-align: center;
     }
+
+    .hero #player {
+        width: 125%;
+    }
 }
 
 @media (min-width: 768px) {
@@ -319,6 +323,7 @@ header {
 .contact-form button:hover {
     background-color: var(--accent-color);
     color: var(--primary-color);
+    transform: scale(1.05);
 }
 
 footer {
@@ -356,7 +361,6 @@ footer {
     transition: all 0.3s ease;
     border: 2px solid var(--accent-color);
     white-space: nowrap;
-    margin-left: 1rem;
 }
 
 .ticket-button:hover {
@@ -364,3 +368,4 @@ footer {
     color: var(--primary-color);
     transform: scale(1.05);
 }
+

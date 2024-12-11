@@ -369,3 +369,39 @@ footer {
     transform: scale(1.05);
 }
 
+/* Unified Button Styles */
+.button,
+.cta-button,
+.ticket-button,
+.contact-form button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid var(--accent-color);
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.button:hover,
+.cta-button:hover,
+.ticket-button:hover,
+.contact-form button:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+/* Remove previous individual button styles */
+.cta-button,
+.ticket-button,
+.contact-form button {
+
+    border: 2px solid var(--accent-color);
+}

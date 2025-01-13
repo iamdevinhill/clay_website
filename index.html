@@ -12,125 +12,170 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="1.jpeg" type="image/jpeg">
-
 </head>
 <body>
-    <header>
-        <a href="#" class="logo" aria-label="Home">Clayton Nile Young</a>
-        <div class="hamburger-menu" aria-label="Menu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#music">Music</a></li>
-                <li><a href="#videos">Videos</a></li>
-                <li><a href="#tour">Tour</a></li>
-                <li><a href="#merch">Merch</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="social-nav-icons">
-                    <a href="https://open.spotify.com/artist/1Pjj9uWZiJXloNcHIJzsNm?si=tDOeldKRTxWTcAvv71Arqg" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
-                    <a href="https://www.youtube.com/@ClaytonNileYoung" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://music.apple.com/us/artist/clayton-nile-young/1700790397" aria-label="Apple Music"><i class="fab fa-apple"></i></a>
-                    <a href="https://www.tiktok.com/@claytonnileyoung" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://www.instagram.com/claytonnileyoung/?hl=en" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <!-- <img id="full-image" src="1.jpeg" alt="Full Image"> -->
+    <!-- Fixed Video Background -->
+    <div id="video-background">
+        <div id="player"></div>
+    </div>
 
-    <main>
-        <section id="home" class="hero">
-            <div id="player"></div>
-            <div class="hero-overlay">
-                <div class="hero-content">
-                    <h1>Debut Album "Della" Out Now</h1>
-                    <p>Listen on any streaming service</p>
-                    <a href="#music" class="cta-button">Explore Music</a>
-                </div>
+    <!-- Main Content Wrapper -->
+    <div class="content-wrapper">
+        <!-- Header -->
+        <header>
+            <a href="#" class="logo" aria-label="Home">Clayton Nile Young</a>
+            <div class="hamburger-menu" aria-label="Menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
-        </section>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#music">Music</a></li>
+                    <li><a href="#videos">Videos</a></li>
+                    <li><a href="#tour">Tour</a></li>
+                    <li><a href="#merch">Merch</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="social-nav-icons">
+                        <a href="https://open.spotify.com/artist/1Pjj9uWZiJXloNcHIJzsNm?si=tDOeldKRTxWTcAvv71Arqg" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+                        <a href="https://www.youtube.com/@ClaytonNileYoung" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://music.apple.com/us/artist/clayton-nile-young/1700790397" aria-label="Apple Music"><i class="fab fa-apple"></i></a>
+                        <a href="https://www.tiktok.com/@claytonnileyoung" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/claytonnileyoung/?hl=en" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-        <div class="container">
-            <section id="music" class="music-section">
-                <h2 class="section-title">Latest Releases</h2>
-                <div class="music-grid">
-                    <article class="album">
-                        <h3>"Della"</h3>
-                        <p>Debut Album</p>
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/74K3nTXx03EfRl1J07tHqM?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </article>
-                    <article class="album">
-                        <h3>Western AF</h3>
-                        <p>Live Version</p>
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5oOt5kqd9waKLHbnJKQmZT?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </article>
-                </div>
-            </section>
-
-            <section id="videos" class="video-section">
-                <h2 class="section-title">Videos</h2>
-                <div class="video-container">
-                    <article class="merch-item">
-                        <h3>Live With Western AF</h3>
-                        <p>Watch Now</p>
-                        <div class="video-embed">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/UnBJMnWzAPE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </article>
-                    <article class="merch-item">
-                        <h3>Live With AppalachiaUntold</h3>
-                        <p>Watch Now</p>
-                        <div class="video-embed">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/WReLbFf-wFQ?si=XTpsUI0wHfr8-BLm" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section id="tour" class="tour-section">
-                <h2 class="section-title">Upcoming Tour Dates</h2>
-                <div class="tour-grid">
-                    <div class="tour-card">
-                        <div class="tour-date">July 25-26, 2025</div>
-                        <div class="tour-location">
-                            <h3>Heinävesi, Finland</h3>
-                            <p>Haywater Country Music Festival</p>
-                        </div>
-                        <a href="https://www.haywater.fi/" class="ticket-button">Get Tickets</a>
-                </div>
-            </section>
-
-            <section id="merch" class="merch-section">
-                <h2 class="section-title">Merchandise - Coming Soon</h2>
-            </section>
-
-            <section id="contact" class="contact-section">
-                <h2 class="section-title">Contact</h2>
-                <div class="contact-card">
-                    <div class="contact-content">
-                        <h3>If you have any inquiries regarding bookings, press, or general questions, </br> please reach out here:</h3>
-                        <button id="email-button" class="cta-button" aria-label="Send an email">Contact</button>
+        <!-- Main Content -->
+        <main>
+            <!-- Hero Section -->
+            <section id="home" class="hero">
+                <!-- <div class="hero-overlay"> -->
+                    <div class="hero-content">
+                        <h1>Debut Album "Della" Out Now</h1>
+                        <p>Listen on any streaming service</p>
+                        <a href="#music" class="cta-button">Explore Music</a>
                     </div>
-                </div>
+                <!-- </div> -->
             </section>
-        </div>
-    </main>
 
-    <footer>
-        <p>Follow Clayton Nile Young</p>
-        <div class="social-icons">
-            <a href="https://open.spotify.com/artist/1Pjj9uWZiJXloNcHIJzsNm?si=tDOeldKRTxWTcAvv71Arqg" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
-            <a href="https://www.youtube.com/@ClaytonNileYoung" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="https://music.apple.com/us/artist/clayton-nile-young/1700790397" aria-label="Apple Music"><i class="fab fa-apple"></i></a>
-            <a href="https://www.tiktok.com/@claytonnileyoung" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-            <a href="https://www.instagram.com/claytonnileyoung/?hl=en" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        </div>
-        <p>&copy; 2024 Clayton Nile Young. All rights reserved.</p>
-    </footer>
+            <div class="container">
+                <!-- Music Section -->
+                <section id="music" class="music-section">
+                    <h2 class="section-title">Latest Releases</h2>
+                    <div class="music-grid">
+                        <article class="album">
+                            <h3>"Della"</h3>
+                            <p>Debut Album</p>
+                            <iframe style="border-radius:12px" 
+                                src="https://open.spotify.com/embed/album/74K3nTXx03EfRl1J07tHqM?utm_source=generator&theme=0" 
+                                width="100%" 
+                                height="352" 
+                                frameBorder="0" 
+                                allowfullscreen="" 
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                                loading="lazy">
+                            </iframe>
+                        </article>
+                        <article class="album">
+                            <h3>Western AF</h3>
+                            <p>Live Version</p>
+                            <iframe style="border-radius:12px" 
+                                src="https://open.spotify.com/embed/album/5oOt5kqd9waKLHbnJKQmZT?utm_source=generator&theme=0" 
+                                width="100%" 
+                                height="352" 
+                                frameBorder="0" 
+                                allowfullscreen="" 
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                                loading="lazy">
+                            </iframe>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Videos Section -->
+                <section id="videos" class="video-section">
+                    <h2 class="section-title">Videos</h2>
+                    <div class="video-container">
+                        <article class="merch-item">
+                            <h3>Live With Western AF</h3>
+                            <p>Watch Now</p>
+                            <div class="video-embed">
+                                <iframe width="560" 
+                                    height="315" 
+                                    src="https://www.youtube.com/embed/UnBJMnWzAPE" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </article>
+                        <article class="merch-item">
+                            <h3>Live With AppalachiaUntold</h3>
+                            <p>Watch Now</p>
+                            <div class="video-embed">
+                                <iframe width="560" 
+                                    height="315" 
+                                    src="https://www.youtube.com/embed/WReLbFf-wFQ?si=XTpsUI0wHfr8-BLm" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Tour Section -->
+                <section id="tour" class="tour-section">
+                    <h2 class="section-title">Upcoming Tour Dates</h2>
+                    <div class="tour-grid">
+                        <div class="tour-card">
+                            <div class="tour-date">July 25-26, 2025</div>
+                            <div class="tour-location">
+                                <h3>Heinävesi, Finland</h3>
+                                <p>Haywater Country Music Festival</p>
+                            </div>
+                            <a href="https://www.haywater.fi/" class="ticket-button">Get Tickets</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Merch Section -->
+                <section id="merch" class="merch-section">
+                    <h2 class="section-title">Merchandise - Coming Soon</h2>
+                </section>
+
+                <!-- Contact Section -->
+                <section id="contact" class="contact-section">
+                    <h2 class="section-title">Contact</h2>
+                    <div class="contact-card">
+                        <div class="contact-content">
+                            <h3>If you have any inquiries regarding bookings, press, or general questions, <br> please reach out here:</h3>
+                            <button id="email-button" class="cta-button" aria-label="Send an email">Contact</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>Follow Clayton Nile Young</p>
+            <div class="social-icons">
+                <a href="https://open.spotify.com/artist/1Pjj9uWZiJXloNcHIJzsNm?si=tDOeldKRTxWTcAvv71Arqg" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.youtube.com/@ClaytonNileYoung" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://music.apple.com/us/artist/clayton-nile-young/1700790397" aria-label="Apple Music"><i class="fab fa-apple"></i></a>
+                <a href="https://www.tiktok.com/@claytonnileyoung" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/claytonnileyoung/?hl=en" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 Clayton Nile Young. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
     <script src="scripts.js"></script>
 </body>
 </html>
